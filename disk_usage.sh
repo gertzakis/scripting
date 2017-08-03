@@ -1,8 +1,10 @@
-# Script for checking the disk_usage in your computer
-# This is free software, under the GNU v3 Public License
-# Author: Makis Tzakis
-# This is my first script so WARNING!
+#!/bin/sh
 
+# Script for find disk usage
 
-echo "Hello"
-
+echo -e "\n"
+echo " ========== Disk Usage Script ========= "
+echo "Disk Usage per system: "
+df -H | grep -vE '^Filesystem|tmpfs|cdrom' | awk '{ print $5 " " $1}'
+echo -e "\n\n"
+echo " ====================================== "
