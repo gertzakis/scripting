@@ -31,3 +31,4 @@ if [ "$EXCLUDE_LIST" != "" ] ; then
 else
   df -H | grep -vE "^Filesystem|tmpfs|cdrom" | awk '{print $5 " " $6}' | main_prog
 fi
+
