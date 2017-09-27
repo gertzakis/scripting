@@ -1,4 +1,5 @@
 # scripting
 
-#Here ill put my journey to learn bash scripts.
-#anyone is welcome to commit!
+# Here ill put my journey to learn bash scripts.
+# anyone is welcome to commit!
+# Thank you
