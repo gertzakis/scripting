@@ -20,8 +20,8 @@ get_prompt()
 	local WHITE='\[\033[1;37m\]'
 	
 	local USER="${LRED}┌─[ ${LBLUE}\u${LRED}@${LBLUE}\h ${LRED}]"
-	local DIR="${GREEN}\w${YELLOW}\$(branch)${GREEN}"
-	local PROMPT="${LRED}└─$ ${NORMAL}"
+	local DIR="${GREEN}\w${YELLOW}\${GREEN}"
+	local PROMPT="${LRED}└─$ ${WHITE}"
 
 	PS1="\n${USER} ${DIR}\n${PROMPT}"
 }
