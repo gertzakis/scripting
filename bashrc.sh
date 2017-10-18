@@ -1,3 +1,8 @@
+# Git Branch 
+git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 # Prompt
 get_prompt()
 {
@@ -20,7 +25,7 @@ get_prompt()
 	local WHITE='\[\033[1;37m\]'
 	
 	local USER="${LRED}┌─[ ${LBLUE}\u${LRED}@${LBLUE}\h ${LRED}]"
-	local DIR="${GREEN}\w${YELLOW}\${GREEN}"
+	local DIR="${GREEN}\w${YELLOW}\$(git_branch)\${GREEN}"
 	local PROMPT="${LRED}└─$ ${WHITE}"
 
 	PS1="\n${USER} ${DIR}\n${PROMPT}"
