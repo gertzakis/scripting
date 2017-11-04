@@ -17,11 +17,14 @@ iptables -A INPUT -p tcp --dport 80 -m limit --limit 25/minute --limit-burst 100
 iptables -A INPUT -p tcp --dport 443 -m limit --limit 25/minute --limit-burst 100 -j ACCEPT
 
 #
-#Allow webmin & cockpit & 5081
+# Allow ftp
+iptables -A INPUT -p tcp --dport 21 -j ACCEPT
+
+#
+# Allow webmin & cockpit & 5081
 iptables -A INPUT -p tcp --dport 10000 -j ACCEPT
 iptables -A INPUT -p tcp --dport 9090 -j ACCEPT
 iptables -A INPUT -p tcp --dport 5081 -j ACCEPT
-iptables -A INPUT -p tcp --dport 5080 -j ACCEPT
 
 #
 # Accept only 1 ping per second. Faster than that gets dropped & logged.
