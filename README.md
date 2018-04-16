@@ -1,5 +1,6 @@
 # scripting
 
-# Here ill put my journey to learn bash scripts.
-# anyone is welcome to commit!
+# Basic scripts, to learn Bash
+# anyone is welcome to commit.
+# Just BashIt!
 # Thank you
