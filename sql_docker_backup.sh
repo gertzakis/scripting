@@ -1,4 +1,6 @@
 #!/bin/sh
+# script to take backup of MySQL databases from containers
+# you run this script from the host
 
 MYSQL=/usr/bin/mysql
 MYSQLDUMP=/usr/bin/mysqldump

@@ -1,4 +1,7 @@
 #!/bin/bash
+# Script to add sudo-privileged Users
+# Tested on CentOS/RHEL/Fedora
+
 
 # Users list
 Users=("makis" "takis" "giorgos")
