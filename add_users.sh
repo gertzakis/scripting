@@ -1,6 +1,10 @@
 #!/bin/bash
 # Script to add sudo-privileged Users
+# Users added with same username & password
 # Tested on CentOS/RHEL/Fedora
+#
+# TODO, read users from file if input exists else use the list-var
+# TODO, make it a little interactive if you like
 
 
 # Users list
@@ -10,8 +14,8 @@ add_users(){
 	# Print each user in new line
 	echo "Print each user in new line"
 	for user in ${Users[*]}; do
-		echo $user
-		openssl passwd -6 $user
+		echo "Adding user $user"
+		useradd -mp $(openssl passwd -6 $user) $user
 	done
 }
 
