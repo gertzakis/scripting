@@ -10,6 +10,13 @@
 # Users list
 Users=("makis" "takis" "giorgos")
 
+
+test1="makis"
+test2="makis2"
+test3=$test1' '$test2
+#echo $test3
+
+
 add_users(){
 	# Print each user in new line
 	echo "Print each user in new line"
@@ -23,12 +30,20 @@ add_users_group(){
 	# Add users to group wheel
 	echo "Adding users to sudo group"
 	for user in ${Users[*]}; do
-		echo $user
+		echo "Adding $user to wheel group"
+		usermod -aG wheel $user
 	done
 }
 
-add_users
-add_users_group
+
+#add_users
+#add_users_group
+
+if [ -n "$1" ]; then
+	echo $1
+else
+	echo $Users
+fi
 
 echo "Cheers!"
 
