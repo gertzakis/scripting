@@ -1,6 +1,6 @@
 # scripting
 
-# Basic scripts, to learn Bash
+# Basic scripts in Bash for task automation, firewall, backup etc
 #
 # Just BashIt!
 
