@@ -1,6 +1,6 @@
 # scripting
 
-# Basic scripts, to learn Bash
+ Basic scripts, to learn Bash
 #
-# Just BashIt!
+## Just BashIt!
 
