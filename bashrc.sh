@@ -31,4 +31,9 @@ get_prompt()
 	PS1="\n${USER} ${DIR}\n${PROMPT}"
 }
 
+# Some aliases
+alias gl='git log --pretty=format:"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn %ai]" --decorate --graph'
+alias gll='git log --pretty=format:"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn %ai] %n%b" --decorate --graph --numstat'
+
+
 get_prompt
