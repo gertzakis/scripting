@@ -35,5 +35,7 @@ get_prompt()
 alias gl='git log --pretty=format:"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn %ai]" --decorate --graph'
 alias gll='git log --pretty=format:"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn %ai] %n%b" --decorate --graph --numstat'
 
+# git variables for showing changes, when you use __git_ps1
+export GIT_PS1_SHOWUNTRACKEDFILES=1 GIT_PS1_SHOWSTASHSTATE=1 GIT_PS1_SHOWDIRTYSTATE=1 GIT_PS1_SHOWCOLORHINTS=1 GIT_PS1_DESCRIBE_STYLE="branch" GIT_PS1_SHOWUPSTREAM="auto git"
 
 get_prompt
