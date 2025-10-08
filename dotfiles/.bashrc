@@ -56,11 +56,10 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-
 #export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWSTASHSTATE=1
 #export GIT_PS1_SHOWDIRTYSTATE=1
-export GIT_PS1_SHOWCOLORHINTS=1
+#export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_DESCRIBE_STYLE="branch"
 export GIT_PS1_SHOWUPSTREAM="auto git"
 if [ "$color_prompt" = yes ]; then
@@ -181,5 +180,10 @@ source <(cilium completion bash)
 # Hubble auto-completion
 source <(hubble completion bash)
 
-source /home/memos/.bash_completions/netobs-cli.sh
+# AWS auto-complete
+complete -C '/usr/local/bin/aws_completer' aws
 
+# Windmill-cli
+source <(wmill completions bash)
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
